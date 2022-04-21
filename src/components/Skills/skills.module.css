@@ -1,0 +1,194 @@
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 60px;
+}
+
+.skillSection {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.techTitle {
+  text-align: center;
+  font-size: 3rem;
+  margin: 20px 0;
+  width: 70%;
+  background-color: var(--extra-color);
+  box-shadow: 10px 10px 0 0 var(--third-color);
+  color: var(--white);
+  padding: 20px 0;
+}
+
+.listsCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  margin: auto;
+  margin-top: 60px;
+  padding: 50px 0;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 100px;
+}
+
+.item {
+  width: 270px;
+  display: grid;
+  place-items: center;
+  row-gap: 30px;
+}
+
+.item>svg {
+  object-fit: cover;
+  width: 100%;
+
+}
+
+.skillTitle {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.softTitle {
+  text-align: center;
+  font-size: 3rem;
+  margin: 20px 0;
+  width: 70%;
+  background-color: var(--third-color);
+  box-shadow: 10px 10px 0 0 var(--extra-color);
+  color: var(--white);
+  padding: 20px 0;
+}
+
+.listSoft {
+  list-style: none;
+  width: 70%;
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.itemSoftSkills{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: var(--extra-color);
+  margin: 0px 0;
+  padding: 30px;
+  border-radius: 5px;
+  position: relative;
+  transition: all .2s;
+  overflow: hidden;
+}
+.itemSoftSkills:hover{
+  transform: scale(1.1);
+}
+.itemSoftSkills::after{
+  position: absolute;
+  content: '';
+  background-color: #0008;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .1s;
+}
+.itemSoftSkills:hover::after{
+  opacity: 1;
+}
+
+.itemSoftTitle {
+  position: absolute;
+  text-align: center;
+  max-width: 70%;
+  color: var(--white);
+  z-index: 2000;
+  font-size: 1.7rem;
+  transition: .5s;
+  opacity: 0;
+  font-weight: 700;
+  line-height: 2;
+}
+.itemSoftSkills:hover > .itemSoftTitle{
+  opacity: 1;
+  transition: .5s;
+}
+.softImage{
+  width: 90%;
+  object-fit: cover;
+}
+
+#reactIcon>svg {
+  animation: React-spin infinite 10s linear;
+}
+
+@keyframes React-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width : 50em) {
+
+  .techTitle {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+    width: 85%;
+    background-color: var(--extra-color);
+    box-shadow: 5px 5px 0 0 var(--third-color);
+    color: var(--white);
+    padding: 20px 0;
+  }
+
+  .listsCont {
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+    width: 85%;
+  }
+  .listSoft{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  .itemSoftSkills{
+    padding: 10px;
+  }
+  .softTitle {
+    font-size: 2rem;
+    width: 85%;
+    box-shadow: 5px 5px 0 0 var(--primary-color);
+  }
+  .itemSoftTitle {
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 0;
+    line-height: 1.3;
+    width: 100%;
+    
+  }
+  .softImage{
+    width: 90%;
+    margin: auto;
+
+  }
+}

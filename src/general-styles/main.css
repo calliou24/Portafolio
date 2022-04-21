@@ -1,0 +1,70 @@
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #777;
+}
+
+*::-webkit-scrollbar-button {
+  opacity: none;
+}
+
+* {
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'QuickSand';
+  
+}
+
+*:visited {
+  color: var(--text-color);
+}
+
+:root {
+  --theme-bg:#c79288;
+  --white:#FFFFFF;
+  --icon-color:#202023;
+  --red:#ff0000;
+  --pale-red:	#ff7b7b;
+}
+
+body { 
+
+  --general-bg:#FFFFFF;
+
+  /* --primary-color:#F4F4F4;
+  --secondary-color:#F7D1BA;
+  --third-color:#D49A89;
+  --extra-color:#557571; */
+  --primary-color:#96CEB4;
+  --secondary-color:#FFEEAD ;
+  --third-color:#FFAD60  ;
+  --extra-color:#D9534F ;
+
+  --text-color:#353521;
+  overflow-x: hidden;
+}
+
+body.dark {
+
+  --general-bg:#202023;  
+/* 
+  --primary-color:rgb(252, 179, 179);
+  --secondary-color:rgb(162, 234,182);
+  --third-color:rgb(162, 210, 255);
+   */
+  --text-color:#fff;
+  
+}
+
+.App {
+  background-color: var(--general-bg);
+  min-width:100vw ;
+  min-height: 100vh;
+  transition: all .2s;
+  position: relative;
+  overflow-x: hidden;
+}
