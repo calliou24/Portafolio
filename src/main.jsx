@@ -24,7 +24,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="Portafolio/" element={<MainPage/>}>
-          <Route path="Portafolio/" element={<Home/>}/>
+          <Route index element={<Home/>}/>
+          <Route index path="Portafolio/" element={<Home/>}/>
           <Route path='projects' element={<Projects/>}/>
           <Route path='skills' element={<Skills/>}/>
         </Route>
